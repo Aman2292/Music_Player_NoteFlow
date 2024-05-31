@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteFlow Music Player</title>
+    <link rel="stylesheet" href="2.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="top-section">
+            <div class="player-name">NoteFlow Music Player</div>
+            <div class="album-art-placeholder">
+                <img id="album-art" src="./images/placeholder.jpg" alt="Album Art">
+            </div>
+        </div>
+        
+        <div class="center-section">
+            <div class="text-display-area">
+                <div class="song-info song-title"></div>
+                <div class="song-info artist-name"></div>
+            </div>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+            <div class="time-display">
+                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            </div>
+            <div class="playback-controls">
+                <button id="shuffle"><i class="fas fa-random"></i></button>
+                <button id="skip-backward"><i class="fas fa-backward"></i></button>
+                <button id="play-pause"><i class="fas fa-play"></i></button>
+                <button id="skip-forward"><i class="fas fa-forward"></i></button>
+                
+                <button id="like"><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="volume-controls">
+                <button id="volume-btn"><i class="fas fa-volume-up"></i></button>
+                <input type="range" id="volume-slider" min="0" max="100" value="100">
+            </div>
+        </div>
+        <div class="bottom-section">
+            <button id="list-button"><i class="fas fa-list"></i></button>
+        </div>
+        <div class="song-list">
+            <button id="close-list" class="close-btn"><i class="fas fa-times"></i></button>
+            <ul>
+                <li data-index="0">Animal_transe - Martin garix</li>
+                <li data-index="1">Kholo Kholo - Raman Mahadevan</li>
+                <li data-index="2">Senorita - Shawn-Mendes</li>
+                <li data-index="3">O Mahi O Mahi - Arijit Singh</li>
+                <li data-index="4">Runaway - Aurora</li>
+                <li data-index="5">Sajni-Re - Arijit Singh</li>
+                <li data-index="6">Beautiful-Things - Benson-Boone</li>
+            </ul>
+        </div>        
+      
+    <audio id="audio-player"></audio>
+    <script src="3.js"></script>
+</body>
+</html>
